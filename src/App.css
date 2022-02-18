@@ -1,3 +1,114 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  height: 100vh;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(https://images.unsplash.com/photo-1610296669228-602fa827fc1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1360&q=768);
+  background-repeat:no-repeat;
+  background-size: 100%;
+}
+
+#root {
+  border: 1px solid rgba(168, 168, 168, 0.322);
+  background-color: rgba(41, 41, 41, 0.11);
+  backdrop-filter: blur(24px);
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: auto;
+}
+
+img {
+  width: 150px;
+}
+.header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.322);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solar-system {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.322);
+}
+
+.solar-system-container {
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+}
+
+.missions {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.missions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-auto-flow: dense;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mission-card {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.219);
+  border-radius: 6px;
+  box-shadow: rgb(45, 45, 46) 0px 10px 30px -10px;
+  transition: all 0.3s;
+}
+
+.planet-card:hover, .mission-card:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+}
+
+.planet-card {
+  padding: 16px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  background-color: rgba(0, 0, 0, 0.219);
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   transition: all 0.3s;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.24);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 3px solid rgba(63, 63, 63, 0);
 }
